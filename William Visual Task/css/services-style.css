@@ -1,0 +1,241 @@
+body{
+    background-color: whitesmoke;
+    font-size: 19px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* NAV BAR */
+.logo{
+    font-family: 'Into the light', cursive;
+}
+.rest{
+    text-decoration-line: underline ;
+    text-decoration-color: rgb(238, 172, 49);
+    font-size: 26px;
+    color: black;
+}
+.v{
+    color: rgb(238, 172, 49);
+    font-size: 29px;
+    text-decoration-line: underline ;
+    text-decoration-color: rgb(238, 172, 49);
+}
+.w{
+    color: rgb(238, 172, 49);
+    font-size: 27px;
+    position: absolute;
+    left: 2.65rem;
+} 
+nav{
+    display: flex;
+    justify-content: space-between;
+    height: 6vh;
+    align-items: center;
+    padding: 0 1.5rem 1rem 2.3rem;
+}
+.links>ul{
+    list-style-type: none;
+    display: flex;
+}
+.links{
+    margin-top: 1rem;
+}
+.links>ul>li>a{
+    justify-content: space-between;
+    padding: 0 2.3rem;
+    text-decoration: none;
+    color: rgb(238, 172, 49);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 18px;
+}
+.links>ul>li>a:hover{
+    color: rgba(161, 114, 27, 0.856);
+    background-color: rgba(228, 166, 52, 0.836);
+    border-radius: 5px;
+    padding: .5rem 2.3rem;
+}
+
+/* ****** */
+/* BURGER */
+.burger{
+    display: none;
+}
+.burger>.line{
+    width: 35px;
+    height: 4px;
+    background-color: rgb(238, 172, 49);
+    margin: .31rem;
+    border-radius: 2px;
+}
+
+/* ******* */
+/* BURGER COLLAPSE */
+.burger-x{
+    display: none;
+}
+.burger-x>.line{
+    width: 35px;
+    height: 4px;
+    background-color: rgb(238, 172, 49);
+    margin: .31rem;
+    border-radius: 2px;
+}
+.burger-x .top{
+    transform: rotate(45deg) translateX(20%);
+}
+.burger-x .middle{
+    display: none;
+}
+.burger-x .bottom{
+    transform: rotate(135deg) translateX(-15%);
+}
+
+/* **** */
+/* MAIN */
+main{
+    display: grid;
+    grid-template-columns: .5fr .5fr .5fr .5fr .5fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "text-box text-box text-box image image"
+    "text-box text-box text-box image image"
+    "text-box text-box text-box image image";
+}
+.text-box{
+    grid-area: text-box;
+    display: block;
+}
+.text{
+    background-color: rgba(136, 131, 131, 0.322);
+    color: black;
+    padding: .7rem 1.4rem 1rem;
+}
+.text>h3{
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.text:nth-child(2){
+    background-color: rgba(7, 48, 48, 0.911);
+    color: white;
+    margin: .6rem 0;
+}
+.image{
+    grid-area: image;
+}
+.image> img{
+    width: 100%;
+    height: 100%;
+}
+
+/* ******** */
+/* MEDIA QUERIES */
+@media screen and (max-width:1200px){
+    nav{
+        margin: 0 1.5rem 0 1rem;
+    }
+    .links>ul>li>a{
+        font-size: 15px;
+        padding: 0 1rem;
+        font-weight: 550;
+    }
+    .rest{
+        font-size: 21px;
+    }
+    .v{
+        font-size: 24px;
+    }
+    .w{
+        font-size: 24px;
+        left: 3.55rem;
+    }
+}
+
+@media screen and (max-width:900px){
+    nav{
+        margin: 0 0 0 1rem;
+    }
+    .links>ul>li>a{
+        font-size: 14px;
+        padding: 0 1rem;
+    }
+    .w{
+        left: 3.6rem;
+    }
+}
+
+@media screen and (max-width:850px){
+    nav{
+        padding: 0 2rem 1rem 1rem;
+    }
+    .links{
+        display: none;
+        text-align: center;
+        flex-direction: column;
+        height: max-content;
+        width: max-content;
+        z-index: 1;
+        position: absolute;
+        right: 10.5%;
+        top: 4.5%;
+        opacity: 94%;
+        padding: .2rem 1rem;
+        border: 1px solid rgb(238, 172, 49);
+        border-radius: 7px 0 7px 0;
+        background-color: whitesmoke;
+    }
+    .links>ul{
+        display: block;
+        padding-inline-start: 0;
+    }
+    .links a{
+        line-height: 2.5;
+    }
+    .links>ul>li>a:hover{
+        width: 70%;
+        border-radius: 3px;
+        padding: 3px 5px;
+    }
+    .burger{
+        display: block;
+    }
+    .w{
+        font-size: 22px;
+        left: 2.35rem;
+    }
+
+    main{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: .3fr .4fr;
+        grid-template-areas: 
+        "image"
+        "text-box";
+    }
+    .text-box{
+        grid-area: text-box;
+        font-size: 70%;
+    }
+    .text-box h3{
+        font-size: 18px;
+    }
+    .image{
+        grid-area: image;
+        margin-bottom: .5rem;
+    }
+}
+
+@media screen and (max-width: 700px){
+    nav{
+        padding: 0 1rem 1rem;
+    }
+    .burger>.line{
+        width: 30px;
+        height: 3px;
+    }
+    .burger-x>.line{
+        width: 30px;
+        height: 3px;
+    }
+}

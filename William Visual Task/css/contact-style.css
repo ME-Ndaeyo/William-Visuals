@@ -1,0 +1,340 @@
+/* ***** */
+/* GENERAL STYLING */
+body{
+    background-color: whitesmoke;
+    font-size: 19px;
+    font-family: 'Roboto', sans-serif;
+}
+p{
+    color: whitesmoke;
+    opacity: .8;
+}
+hr{
+    visibility: hidden;
+}
+pre{
+    text-align: center;
+    color: grey;
+}
+
+/* ***** */
+/* NAVBAR */
+.logo{
+    font-family: 'Into the light', cursive;
+}
+.rest{
+    text-decoration-line: underline ;
+    text-decoration-color: rgb(238, 172, 49);
+    font-size: 26px;
+    color: black;
+}
+.v{
+    color: rgb(238, 172, 49);
+    font-size: 29px;
+    text-decoration-line: underline ;
+    text-decoration-color: rgb(238, 172, 49);
+}
+.w{
+    color: rgb(238, 172, 49);
+    font-size: 27px;
+    position: absolute;
+    left: 2.65rem;
+} 
+nav{
+    display: flex;
+    justify-content: space-between;
+    height: 6vh;
+    align-items: center;
+    padding: 0 1.5rem 1rem 2.3rem;
+}
+.links>ul{
+    list-style-type: none;
+    display: flex;
+}
+.links{
+    margin-top: 1rem;
+}
+.links>ul>li>a{
+    justify-content: space-between;
+    padding: 0 2.3rem;
+    text-decoration: none;
+    color: rgb(238, 172, 49);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 18px;
+}
+.links>ul>li>a:hover{
+    color: rgba(161, 114, 27, 0.856);
+    background-color: rgba(228, 166, 52, 0.836);
+    border-radius: 5px;
+    padding: .5rem 2.3rem;
+}
+
+/* ****** */
+/* BURGER */
+.burger{
+    display: none;
+}
+.burger>.line{
+    width: 35px;
+    height: 4px;
+    background-color: rgb(238, 172, 49);
+    margin: .31rem;
+    border-radius: 2px;
+}
+
+/* ******* */
+/* BURGER COLLAPSE */
+.burger-x{
+    display: none;
+}
+.burger-x>.line{
+    width: 35px;
+    height: 4px;
+    background-color: rgb(238, 172, 49);
+    margin: .31rem;
+    border-radius: 2px;
+}
+.burger-x .top{
+    transform: rotate(45deg) translateX(20%);
+}
+.burger-x .middle{
+    display: none;
+}
+.burger-x .bottom{
+    transform: rotate(135deg) translateX(-15%);
+}
+
+/* ****** */
+/* CONTACT US */
+.mid-contact{
+    margin: 4rem 1rem 0;
+    background-color: rgba(7, 48, 48, 0.911);
+    color: white;
+    padding: 0 7rem;
+}
+.mid-contact>.card-box{
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem;
+}
+.mid-contact>.card-box>.card{
+    width: 25%;
+    text-align: center;
+}
+.email, .phone, .address{
+    background-color: rgba(136, 131, 131, 0.322);
+    padding: 1rem;
+    border-radius: 30px;
+}
+
+/* ***** */
+/* FOOTER */
+.footer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: .2fr;
+    grid-template-areas: 
+    "chat social-icons .";
+}
+.chat{
+    grid-area: chat;
+    background-color: rgba(136, 131, 131, 0.322);
+    border-radius: 10px;
+    padding: 0 1rem;
+    margin: 3rem .5rem 3rem 6rem;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+span.comment{
+    padding: 0;
+    font-size: 3rem;
+    position: relative;
+    top: 21%;
+}
+.social-icons{
+    grid-area: social-icons;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+.social-icon{
+    margin: 1rem;
+    background-color: rgba(136, 131, 131, 0.322);
+    border-radius: 4px;
+}
+.fa-google{
+    padding: 8px;
+    color: rgb(3, 85, 3);
+}
+.fa-facebook-f{
+    padding: 8px 12px;
+    color: rgb(6, 6, 165);
+}
+.fa-twitter{
+    padding: 8px;
+    color: rgba(27, 67, 247, 0.87);
+}
+
+/* ********* */
+/* MEDIA QUERIES */
+@media screen and (max-width:1200px){
+    nav{
+        margin: 0 1.5rem 0 1rem;
+    }
+    .links>ul>li>a{
+        font-size: 15px;
+        padding: 0 1rem;
+        font-weight: 550;
+    }
+    .rest{
+        font-size: 21px;
+    }
+    .v{
+        font-size: 24px;
+    }
+    .w{
+        font-size: 24px;
+        left: 3.55rem;
+    }
+    .mid-contact{
+        margin-top: 3rem;
+    }
+}
+
+@media screen and (max-width:900px){
+    nav{
+        padding: 0 0 0 1.5rem;
+    }
+    .links>ul>li>a{
+        font-size: 14px;
+        padding: 0 1rem;
+    }
+    .w{
+        left: 2.8rem;
+    }
+}
+
+@media screen and (max-width:850px){
+    nav{
+        padding: 0 2rem 0 2.5rem;
+    }
+    hr{
+        visibility: visible;
+        width: 80%;
+        border-top: 1px grey;
+    }
+    .links{
+        display: none;
+        text-align: center;
+        flex-direction: column;
+        height: max-content;
+        width: max-content;
+        z-index: 1;
+        position: absolute;
+        right: 14%;
+        top: 5%;
+        opacity: 94%;
+        border: 1px solid rgb(238, 172, 49);
+        border-radius: 7px 0 7px 0;
+        background-color: whitesmoke;
+    }
+    .links>ul{
+        display: block;
+        padding-inline-start: 0;
+    }
+    .links a{
+        line-height: 2.5;
+    }
+    .links>ul>li>a:hover{
+        width: 70%;
+        border-radius: 3px;
+        padding: 3px 5px;
+    }
+    .burger{
+        display: block;
+    }
+    .w{
+        font-size: 22px;
+        left: 3.8rem;
+    }
+    .mid-contact{
+        margin-top: 2rem;
+        padding: 0;
+        font-size: 80%;
+    }
+    .mid-contact>.card-box{
+        display: block;
+    }
+    .mid-contact>.card-box>.card{
+        width: 100%;
+        margin: 4rem auto;
+        
+    }
+    .footer{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: .2fr;
+        grid-template-areas: 
+        "chat chat social-icons";
+        margin-bottom: 5rem;
+    }
+    .chat{
+        margin: 1rem 1.5rem;
+        font-size: 65%;
+    }
+    .chat>.comment{
+        font-size: 1.6rem;
+        font-weight: 700;
+    }
+    .social-icons{
+        grid-area: social-icons;
+        display: flex;
+        align-items: center;
+        margin: 0;
+    }
+    .social-icon{
+        margin: .5rem;
+    }
+    .fa-google{
+        padding: 5px;
+    }
+    .fa-facebook-f{
+        padding: 5px 9px;
+    }
+    .fa-twitter{
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width: 700px){
+    nav{
+        padding: 0 1rem;
+    }
+    
+    .w{
+        left: 2.35rem;
+    }
+    .links{
+        top: 4.5%;
+        right: 16%;
+        width: max-content;
+        padding: .2rem 1rem;
+    }
+    .burger>.line{
+        width: 30px;
+        height: 3px;
+    }
+    .burger-x>.line{
+        width: 30px;
+        height: 3px;
+    }
+    .mid-contact{
+        margin-top: 1rem;
+        font-size: 70%;
+    }
+    pre{
+        font-size: 80%;
+    }
+}
